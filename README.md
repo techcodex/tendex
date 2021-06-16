@@ -33,5 +33,7 @@ file and update your project configuration
    - TWILIO_TOKEN
    - TWILIO_FROM
 
-10. If you are using xampp then open project on browser with http://localhost/project_name or if 
+10. Import countries table into your database countries table is available in your projectpublic directory.
+
+11. If you are using xampp then open project on browser with http://localhost/project_name or if 
    you are using laragon then the url will be http://project_name.test
