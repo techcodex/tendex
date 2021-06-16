@@ -45,7 +45,7 @@ class UserSmsVerificationController extends Controller
             return back();
         }
 
-        
+        // Storing Verification code in Session for later verification
         $request->request->set('verification_code',$verification_code);
         Session::put('user',$request->all());
 

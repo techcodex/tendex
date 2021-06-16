@@ -17,7 +17,7 @@ class SmsVerificationController extends Controller
      */
     public function showVerificationForm()
     {
-        if(!Session::has('user')) {
+        if (!Session::has('user')) {
             return redirect()->route('register');
         }
         return view('auth.verify_sms');
@@ -55,7 +55,7 @@ class SmsVerificationController extends Controller
             $now = new Carbon();
 
             // Checking Verification Delay
-            if(Session::has('verification_delay') && Session::get('verification_delay') > $now->toDateTimeString()) {
+            if (Session::has('verification_delay') && Session::get('verification_delay') > $now->toDateTimeString()) {
                 Session::flash('error','Please Wait few Minute!');
                 return back();
             }
@@ -79,7 +79,6 @@ class SmsVerificationController extends Controller
                 Session::put('error','Unable To Send Message Please try again!');
                 return back();
             }
-
 
 
         } catch (Exception $ex) {
