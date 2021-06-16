@@ -27,6 +27,11 @@ file and update your project configuration
    your database password if your database is not using any password then leave it empty.
 7. Then Run this Command in your terminal **php artisan migrate**
 8. If the **php artisan migrate** run successfully you are done with your setup
-9. If you are using xampp then open project on browser with http://localhost/project_name or if 
-   you are using laragon then the url will be http://project_name.test
+9. Add these 3 param in your .env file and then run the project you will get this param from twilio because I cannot publicaly expose that paramters.
 
+**TWILIO_SID**
+**TWILIO_TOKEN**
+**TWILIO_FROM**
+
+10. If you are using xampp then open project on browser with http://localhost/project_name or if 
+   you are using laragon then the url will be http://project_name.test
