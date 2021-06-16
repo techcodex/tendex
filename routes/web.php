@@ -21,11 +21,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-// Sms Routes
-Route::get('/verify_sms','SmsVerificationController@showVerificationForm')->name('verify_form');
-Route::post('verify_sms','SmsVerificationController@verify')->name('verify_sms');
-Route::get('/resend_sms','SmsVerificationController@resend')->name('resend');
-
 Route::middleware(['auth'])->group(function() {
     // User Sms Verification Routes
     Route::get('/user/verify/contact_form','UserSmsVerificationController@showContactNoForm')->name('user.contact_form');
@@ -34,7 +29,10 @@ Route::middleware(['auth'])->group(function() {
     Route::get('/user/verify_sms','UserSmsVerificationController@showVerificationForm')->name('user.verifyForm');
 });
 
-
+// Sms Routes
+Route::get('/verify_sms','SmsVerificationController@showVerificationForm')->name('verify_form');
+Route::post('verify_sms','SmsVerificationController@verify')->name('verify_sms');
+Route::get('/resend_sms','SmsVerificationController@resend')->name('resend');
 
 // linkedin Login Routes
 Route::get('/redirect', 'SocialAuthLinkedinController@redirect');

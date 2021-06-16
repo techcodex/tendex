@@ -7,7 +7,8 @@ use App\User;
 use Illuminate\Support\Facades\Auth;
 use Exception;
 
-class SocialLoginRepository {
+class SocialLoginRepository
+{
     /**
      * Login Via Linkedin
      */

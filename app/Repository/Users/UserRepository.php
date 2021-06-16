@@ -6,7 +6,8 @@ use App\User;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Hash;
 
-class UserRepository {
+class UserRepository
+{
     /**
      * @param user ID
      * Authenticate Via User ID

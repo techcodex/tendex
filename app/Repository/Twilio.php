@@ -6,7 +6,8 @@ use Exception;
 use Twilio\Rest\Client;
 use Session;
 
-class Twilio {
+class Twilio
+{
     /**
      * @param User Contact No;
      * Send Verification SMS
